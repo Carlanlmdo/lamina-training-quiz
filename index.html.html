@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>La Mina de Oro · Sales Rep Training Quiz 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/jpeg" href="logo.jpeg" />
+<style>
+  :root {
+    --gold: #c8a04a;
+    --gold-light: #e6c878;
+    --gold-deep: #8a6b22;
+    --ink: #0e0c08;
+    --cream: #f7f2e7;
+    --line: rgba(200, 160, 74, 0.25);
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--ink); color: var(--cream); font-family: var(--sans); -webkit-font-smoothing: antialiased; font-size: 17px; }
+  body {
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(200, 160, 74, 0.12), transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(138, 107, 34, 0.10), transparent 50%),
+      var(--ink);
+    min-height: 100vh; background-attachment: fixed;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/><feColorMatrix values='0 0 0 0 0.78 0 0 0 0 0.63 0 0 0 0 0.29 0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.5; pointer-events: none; z-index: 1; mix-blend-mode: overlay;
+  }
+  .container { max-width: 980px; margin: 0 auto; padding: 48px 24px 120px; position: relative; z-index: 2; }
+
+  header.hero { text-align: center; padding: 32px 0 56px; border-bottom: 1px solid var(--line); margin-bottom: 48px; position: relative; }
+  .logo-wrap { display: flex; justify-content: center; margin-bottom: 36px; }
+  .logo-wrap img { max-width: 220px; width: 55vw; height: auto; border-radius: 6px; box-shadow: 0 12px 32px -10px rgba(0,0,0,0.6), 0 0 0 1px rgba(200,160,74,0.2); }
+  .brand-mark { display: inline-flex; align-items: center; gap: 14px; color: var(--gold); font-family: var(--serif); font-style: italic; font-size: 16px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 28px; }
+  .brand-mark::before, .brand-mark::after { content: ""; width: 36px; height: 1px; background: var(--gold); opacity: 0.6; }
+  h1.title { font-family: var(--serif); font-weight: 500; font-size: clamp(44px, 7.5vw, 78px); line-height: 0.95; color: var(--cream); letter-spacing: -0.01em; }
+  h1.title em { font-style: italic; color: var(--gold-light); font-weight: 400; }
+  .subtitle { margin-top: 20px; font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247, 242, 231, 0.55); }
+  .subtitle-es { font-family: var(--serif); font-style: italic; text-transform: none; letter-spacing: 0.02em; font-size: 19px; color: rgba(230, 200, 120, 0.75); margin-top: 6px; }
+
+  .lang-toggle { position: absolute; top: 32px; right: 0; display: flex; background: rgba(247, 242, 231, 0.04); border: 1px solid var(--line); border-radius: 999px; padding: 4px; font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; }
+  .lang-toggle button { background: transparent; color: rgba(247, 242, 231, 0.5); border: none; padding: 9px 17px; border-radius: 999px; cursor: pointer; font-family: var(--sans); font-weight: 600; transition: all 0.3s ease; font-size: 13px; }
+  .lang-toggle button.active { background: var(--gold); color: var(--ink); }
+  .lang-toggle button:hover:not(.active) { color: var(--gold-light); }
+
+  .intro { text-align: center; margin-bottom: 56px; font-family: var(--serif); font-size: 22px; line-height: 1.5; color: rgba(247, 242, 231, 0.75); font-style: italic; max-width: 680px; margin-left: auto; margin-right: auto; }
+  .intro .es { display: block; margin-top: 10px; font-size: 18px; color: rgba(230, 200, 120, 0.6); }
+  .start-btn-wrap { text-align: center; margin: 40px 0 24px; }
+
+  .sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 32px; }
+  .section-card { background: linear-gradient(180deg, rgba(247, 242, 231, 0.04), rgba(247, 242, 231, 0.01)); border: 1px solid var(--line); border-radius: 4px; padding: 30px 26px 24px; transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .section-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); transform: translateX(-100%); transition: transform 0.6s ease; }
+  .section-card:hover { border-color: var(--gold); transform: translateY(-2px); background: linear-gradient(180deg, rgba(200, 160, 74, 0.08), rgba(200, 160, 74, 0.02)); }
+  .section-card:hover::before { transform: translateX(0); }
+  .section-num { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 15px; letter-spacing: 0.15em; margin-bottom: 12px; }
+  .section-title { font-family: var(--serif); font-size: 28px; line-height: 1.15; font-weight: 500; color: var(--cream); margin-bottom: 6px; }
+  .section-title-es { font-family: var(--serif); font-style: italic; color: rgba(230, 200, 120, 0.7); font-size: 19px; margin-bottom: 16px; }
+  .section-blurb { font-size: 15px; color: rgba(247,242,231,0.5); line-height: 1.5; }
+  .section-blurb .es { font-style: italic; color: rgba(230,200,120,0.5); }
+  .section-meta { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247, 242, 231, 0.4); display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+  .section-meta .badge { color: var(--gold); }
+  .section-buttons { display: flex; gap: 10px; margin-top: 20px; }
+  .section-buttons button { flex: 1; font-family: var(--sans); font-weight: 600; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; padding: 13px 14px; border-radius: 999px; cursor: pointer; transition: all 0.3s ease; border: 1px solid var(--line); background: transparent; color: rgba(247, 242, 231, 0.75); }
+  .section-buttons button.study { border-color: var(--gold); color: var(--gold); }
+  .section-buttons button.study:hover { background: rgba(200, 160, 74, 0.1); color: var(--gold-light); }
+  .section-buttons button.quiz { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+  .section-buttons button.quiz:hover { background: var(--gold-light); border-color: var(--gold-light); box-shadow: 0 8px 24px -8px rgba(200, 160, 74, 0.5); }
+
+  .study-view, .quiz-view { display: none; }
+  .study-view.active, .quiz-view.active { display: block; animation: fadeIn 0.5s ease; }
+  .home-view.hidden { display: none; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .study-header, .quiz-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; padding-bottom: 24px; border-bottom: 1px solid var(--line); flex-wrap: wrap; gap: 16px; }
+  .study-header h2, .quiz-header h2 { font-family: var(--serif); font-weight: 500; font-size: clamp(32px, 4.5vw, 48px); line-height: 1; color: var(--cream); }
+  .study-header h2 .es, .quiz-header h2 .es { display: block; font-style: italic; color: var(--gold-light); font-size: 0.6em; font-weight: 400; margin-top: 4px; }
+  .study-eyebrow { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 14px; }
+  .quiz-header .progress-label { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(247, 242, 231, 0.5); }
+  .quiz-header .progress-label strong { color: var(--gold); font-weight: 600; }
+  .progress-bar { height: 2px; background: rgba(247, 242, 231, 0.08); border-radius: 2px; overflow: hidden; margin-bottom: 40px; }
+  .progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--gold-deep), var(--gold), var(--gold-light)); width: 0%; transition: width 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+  .study-content { background: linear-gradient(180deg, rgba(247, 242, 231, 0.04), rgba(247, 242, 231, 0.01)); border: 1px solid var(--line); border-radius: 4px; padding: 40px 36px; margin-bottom: 32px; }
+  .study-section { margin-bottom: 32px; }
+  .study-section:last-child { margin-bottom: 0; }
+  .study-section h3 { font-family: var(--serif); font-weight: 500; font-size: 24px; color: var(--gold-light); margin-bottom: 4px; line-height: 1.2; }
+  .study-section h3 .es { display: block; font-style: italic; color: rgba(230, 200, 120, 0.6); font-size: 18px; margin-top: 2px; }
+  .study-section li { font-size: 17px; line-height: 1.65; color: rgba(247, 242, 231, 0.85); margin-bottom: 10px; }
+  .study-section li .es { display: block; margin-top: 4px; font-family: var(--serif); font-style: italic; color: rgba(230, 200, 120, 0.6); font-size: 16px; }
+  .study-section ul { list-style: none; padding-left: 0; margin-top: 14px; }
+  .study-section ul li { padding: 12px 0 12px 26px; position: relative; border-bottom: 1px solid rgba(200, 160, 74, 0.1); }
+  .study-section ul li:last-child { border-bottom: none; }
+  .study-section ul li::before { content: "◆"; position: absolute; left: 0; top: 14px; color: var(--gold); font-size: 12px; }
+  .key-quote { border-left: 2px solid var(--gold); padding: 18px 22px; background: rgba(200, 160, 74, 0.06); font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.5; color: var(--cream); margin: 0 0 32px; border-radius: 0 4px 4px 0; }
+  .key-quote .es { display: block; margin-top: 10px; color: rgba(230, 200, 120, 0.65); font-size: 17px; }
+
+  .question-card { background: linear-gradient(180deg, rgba(247, 242, 231, 0.04), rgba(247, 242, 231, 0.01)); border: 1px solid var(--line); border-radius: 4px; padding: 40px 36px; margin-bottom: 32px; position: relative; }
+  .q-number { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 14px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 14px; }
+  .q-text { font-family: var(--serif); font-size: clamp(24px, 3.2vw, 32px); line-height: 1.3; font-weight: 500; color: var(--cream); margin-bottom: 8px; }
+  .q-text-es { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 2.2vw, 20px); line-height: 1.4; color: rgba(230, 200, 120, 0.65); margin-bottom: 32px; padding-left: 16px; border-left: 1px solid var(--line); }
+  .options { display: flex; flex-direction: column; gap: 12px; }
+  .option { background: rgba(247, 242, 231, 0.02); border: 1px solid var(--line); border-radius: 3px; padding: 20px 24px; cursor: pointer; transition: all 0.3s ease; text-align: left; display: flex; gap: 18px; align-items: flex-start; color: var(--cream); font-family: var(--sans); font-size: 17px; line-height: 1.5; width: 100%; }
+  .option:hover:not(:disabled) { border-color: var(--gold); background: rgba(200, 160, 74, 0.06); transform: translateX(2px); }
+  .option-letter { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 20px; flex-shrink: 0; min-width: 22px; }
+  .option-text { flex: 1; }
+  .option-text .es { display: block; margin-top: 6px; color: rgba(230, 200, 120, 0.55); font-style: italic; font-family: var(--serif); font-size: 17px; }
+  .option.correct { border-color: #6ba368; background: rgba(107, 163, 104, 0.08); }
+  .option.correct .option-letter { color: #6ba368; }
+  .option.incorrect { border-color: #a86a6a; background: rgba(168, 106, 106, 0.08); }
+  .option.incorrect .option-letter { color: #a86a6a; }
+  .option:disabled { cursor: default; }
+  .feedback { margin-top: 24px; padding: 22px 26px; border-left: 2px solid var(--gold); background: rgba(200, 160, 74, 0.05); font-family: var(--serif); font-size: 19px; line-height: 1.5; color: rgba(247, 242, 231, 0.9); display: none; animation: fadeIn 0.4s ease; }
+  .feedback.show { display: block; }
+  .feedback strong { display: block; font-family: var(--sans); font-style: normal; font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 600; }
+  .feedback .es { display: block; margin-top: 8px; font-style: italic; color: rgba(230, 200, 120, 0.65); font-size: 17px; }
+
+  .btn { font-family: var(--sans); font-weight: 600; font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; padding: 17px 38px; border-radius: 999px; cursor: pointer; transition: all 0.3s ease; border: 1px solid var(--gold); background: var(--gold); color: var(--ink); }
+  .btn:hover { background: var(--gold-light); border-color: var(--gold-light); transform: translateY(-1px); box-shadow: 0 10px 30px -10px rgba(200, 160, 74, 0.5); }
+  .btn-ghost { background: transparent; color: var(--gold); }
+  .btn-ghost:hover { background: rgba(200, 160, 74, 0.1); color: var(--gold-light); }
+  .btn-row { display: flex; gap: 14px; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+
+  .results { text-align: center; padding: 48px 32px; background: linear-gradient(180deg, rgba(200, 160, 74, 0.08), rgba(200, 160, 74, 0.01)); border: 1px solid var(--gold); border-radius: 4px; margin-top: 32px; display: none; }
+  .results.show { display: block; animation: fadeIn 0.6s ease; }
+  .results .crest { font-family: var(--serif); font-style: italic; color: var(--gold); font-size: 15px; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 20px; }
+  .results .score { font-family: var(--serif); font-size: clamp(64px, 10vw, 100px); font-weight: 500; color: var(--cream); line-height: 1; }
+  .results .score em { font-style: italic; color: var(--gold); font-weight: 400; }
+  .results .tier { font-family: var(--serif); font-style: italic; font-size: 26px; color: var(--gold-light); margin-top: 16px; }
+  .results .tier-es { font-family: var(--serif); font-style: italic; color: rgba(230, 200, 120, 0.6); font-size: 19px; margin-top: 4px; }
+  .results .message { margin-top: 24px; font-family: var(--serif); font-size: 20px; color: rgba(247, 242, 231, 0.7); max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.5; }
+  .results .message .es { display: block; margin-top: 8px; font-style: italic; font-size: 17px; color: rgba(230, 200, 120, 0.55); }
+
+  footer { text-align: center; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--line); font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(247, 242, 231, 0.3); }
+  footer .crest { font-family: var(--serif); font-style: italic; color: var(--gold); text-transform: none; letter-spacing: 0.05em; font-size: 17px; margin-bottom: 8px; }
+
+  body.lang-en .es,
+  body.lang-en .subtitle-es,
+  body.lang-en .section-title-es,
+  body.lang-en .q-text-es,
+  body.lang-en .tier-es { display: none !important; }
+
+  @media (max-width: 600px) {
+    html, body { font-size: 16px; }
+    .container { padding: 32px 18px 80px; }
+    .lang-toggle { position: static; margin: 0 auto 32px; width: fit-content; display: flex; }
+    header.hero { padding-top: 0; }
+    .question-card, .study-content { padding: 28px 22px; }
+    .option { padding: 16px 18px; font-size: 16px; }
+    .btn-row { flex-direction: column-reverse; }
+    .btn-row .btn { width: 100%; text-align: center; }
+    .section-buttons { flex-direction: column; }
+    .logo-wrap img { max-width: 180px; }
+  }
+</style>
+</head>
+<body class="lang-bi">
+<div class="container">
+
+  <div class="home-view" id="home-view">
+    <header class="hero">
+      <div class="lang-toggle">
+        <button data-lang="bi" class="active">EN / ES</button>
+        <button data-lang="en">EN</button>
+        <button data-lang="es">ES</button>
+      </div>
+      <div class="logo-wrap"><img src="logo.jpeg" alt="La Mina de Oro · Beauty Warehouse" /></div>
+      <div class="brand-mark">Beauty Warehouse</div>
+      <h1 class="title">Sales Rep<br><em>Training Quiz</em></h1>
+      <div class="subtitle">2026 · Test Your La Mina Standard</div>
+      <div class="subtitle-es">Pon a prueba El Estándar La Mina</div>
+    </header>
+
+    <p class="intro">Six sections. One standard.<span class="es">Seis secciones. Un solo estándar.</span></p>
+    <p class="intro" style="margin-top:-24px; font-size:19px;">
+      Study each section first, then take the quiz — or jump straight into the full test.
+      <span class="es">Estudia cada sección primero, luego toma el cuestionario — o ve directo al examen completo.</span>
+    </p>
+
+    <div class="start-btn-wrap">
+      <button class="btn" onclick="startQuiz('all')">Take Full Quiz · Cuestionario Completo</button>
+    </div>
+
+    <div class="sections" id="sections-grid"></div>
+
+    <footer>
+      <div class="crest">La Mina de Oro · Beauty Warehouse</div>
+      <div>Sales Rep Training · 2026</div>
+    </footer>
+  </div>
+
+  <div class="study-view" id="study-view">
+    <div class="lang-toggle" style="position:relative; margin: 0 0 24px auto; right: auto;">
+      <button data-lang="bi" class="active">EN / ES</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="es">ES</button>
+    </div>
+    <div class="study-header">
+      <div>
+        <div class="study-eyebrow">Study Guide · Guía de Estudio</div>
+        <h2 id="study-title">—</h2>
+      </div>
+    </div>
+    <div class="study-content" id="study-content"></div>
+    <div class="btn-row">
+      <button class="btn btn-ghost" onclick="goHome()">← Back · Volver</button>
+      <button class="btn" id="start-from-study">Start Quiz · Comenzar Cuestionario</button>
+    </div>
+  </div>
+
+  <div class="quiz-view" id="quiz-view">
+    <div class="lang-toggle" style="position:relative; margin: 0 0 24px auto; right: auto;">
+      <button data-lang="bi" class="active">EN / ES</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="es">ES</button>
+    </div>
+    <div class="quiz-header">
+      <h2 id="quiz-title">Section</h2>
+      <div class="progress-label">Question <strong id="q-current">1</strong> / <strong id="q-total">10</strong></div>
+    </div>
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-fill"></div></div>
+    <div id="question-container"></div>
+    <div class="btn-row">
+      <button class="btn btn-ghost" onclick="goHome()">← Back to Sections · Volver</button>
+      <button class="btn" id="next-btn" onclick="nextQuestion()" style="display:none;">Next · Siguiente</button>
+    </div>
+    <div class="results" id="results">
+      <div class="crest">— Your Result · Tu Resultado —</div>
+      <div class="score"><em id="score-num">0</em> <span style="font-size:0.4em; color: rgba(247,242,231,0.4);">/</span> <span id="score-total" style="font-size:0.55em; color: rgba(247,242,231,0.6);">10</span></div>
+      <div class="tier" id="tier-label">—</div>
+      <div class="tier-es" id="tier-label-es">—</div>
+      <div class="message" id="result-message"></div>
+      <div class="btn-row" style="justify-content:center; margin-top:32px;">
+        <button class="btn btn-ghost" onclick="retryQuiz()">Try Again · Reintentar</button>
+        <button class="btn" onclick="goHome()">All Sections · Todas las Secciones</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ============================================================
+   LA MINA DE ORO · QUIZ DATA
+   ============================================================ */
+const SECTIONS = [
+  {
+    id: "standard",
+    title: "The La Mina Standard",
+    title_es: "El Estándar La Mina",
+    blurb: "Culture & customer experience",
+    blurb_es: "Cultura y experiencia del cliente",
+    study: {
+      quote: "The way we make people feel is what brings them back.",
+      quote_es: "La forma en que hacemos sentir a la gente es lo que los hace regresar.",
+      groups: [
+        { heading: "Why La Mina de Oro", heading_es: "Por qué La Mina de Oro", items: [
+          { en: "25+ years of value, access, and a better fragrance retail experience.", es: "Más de 25 años de valor, acceso y una mejor experiencia en perfumería." },
+          { en: "Customers can buy fragrance anywhere — they choose us because of the energy, service, and experience we create.", es: "Los clientes pueden comprar perfume en cualquier lugar — nos eligen por la energía, el servicio y la experiencia que creamos." }
+        ]},
+        { heading: "How Customers Should Feel", heading_es: "Cómo se Debe Sentir el Cliente", items: [
+          { en: "Welcomed and comfortable.", es: "Bienvenido y cómodo." },
+          { en: "Excited and valued.", es: "Emocionado y valorado." },
+          { en: "Confident they are shopping somewhere honest and trustworthy.", es: "Confiado de comprar en un lugar honesto y confiable." },
+          { en: "Pressure-free — never rushed into a sale.", es: "Sin presión — nunca apurado a comprar." }
+        ]},
+        { heading: "How We Show Up", heading_es: "Cómo Nos Presentamos", items: [
+          { en: "Acknowledge customers immediately.", es: "Reconocer al cliente de inmediato." },
+          { en: "Communicate with confidence and warmth.", es: "Comunicarse con confianza y calidez." },
+          { en: "Stay engaged and active on the floor.", es: "Mantenerse activo en el piso de ventas." },
+          { en: "Work with urgency and purpose.", es: "Trabajar con urgencia y propósito." },
+          { en: "Contribute to a positive team environment.", es: "Contribuir a un ambiente positivo en equipo." }
+        ]},
+        { heading: "Customer Experience Goals", heading_es: "Objetivos de la Experiencia", items: [
+          { en: "Listen first, then ask the right questions.", es: "Escuchar primero, luego hacer las preguntas correctas." },
+          { en: "Make thoughtful recommendations — build trust through honesty.", es: "Hacer recomendaciones cuidadosas — construir confianza con honestidad." },
+          { en: "Customers leave happy with their purchase, appreciated, and excited to return.", es: "Los clientes se van felices con su compra, valorados y emocionados de volver." }
+        ]},
+        { heading: "Membership Program", heading_es: "Programa de Membresía", items: [
+          { en: "Rewards loyalty and enhances savings — not a transaction, an upgrade.", es: "Recompensa la lealtad y mejora los ahorros — no es una transacción, es una mejora." },
+          { en: "Every team member should confidently explain how memberships benefit the customer.", es: "Cada miembro debe poder explicar con confianza cómo las membresías benefician al cliente." }
+        ]},
+        { heading: "Excellence Is Consistent", heading_es: "La Excelencia es Constante", items: [
+          { en: "The Standard is maintained continuously — through small actions repeated all day.", es: "El Estándar se mantiene continuamente — con pequeñas acciones repetidas todo el día." },
+          { en: "Standards are not remembered, they are practiced.", es: "Los estándares no se recuerdan, se practican." }
+        ]}
+      ]
+    },
+    questions: [
+      { q: "What is the one belief La Mina de Oro is built on?", q_es: "¿En qué creencia está construida La Mina de Oro?",
+        options: [
+          { en: "The lowest prices win every time.", es: "Los precios más bajos siempre ganan.", correct: false },
+          { en: "The way we make people feel is what brings them back.", es: "La forma en que hacemos sentir a la gente es lo que los hace regresar.", correct: true },
+          { en: "Inventory variety is the most important thing.", es: "La variedad de inventario es lo más importante.", correct: false },
+          { en: "Social media drives all our sales.", es: "Las redes sociales impulsan todas nuestras ventas.", correct: false }
+        ],
+        explain: "Customers can buy fragrance anywhere — they choose us because of the energy, service, and experience we create every day.",
+        explain_es: "Los clientes pueden comprar perfume en cualquier lugar — nos eligen por la energía, el servicio y la experiencia que creamos todos los días." },
+      { q: "Which of the following is NOT how customers should feel when walking in?", q_es: "¿Cuál de los siguientes NO es como un cliente debe sentirse al entrar?",
+        options: [
+          { en: "Welcomed and comfortable.", es: "Bienvenido y cómodo.", correct: false },
+          { en: "Excited and valued.", es: "Emocionado y valorado.", correct: false },
+          { en: "Pressured to buy quickly.", es: "Presionado para comprar rápido.", correct: true },
+          { en: "Confident they are shopping somewhere honest.", es: "Confiado de comprar en un lugar honesto.", correct: false }
+        ],
+        explain: "Our experience is pressure-free. We listen first, ask the right questions, and build trust through honesty.",
+        explain_es: "Nuestra experiencia es libre de presión. Escuchamos primero, hacemos las preguntas correctas y construimos confianza con honestidad." },
+      { q: "How is The La Mina Standard maintained?", q_es: "¿Cómo se mantiene El Estándar La Mina?",
+        options: [
+          { en: "Through one big effort once a month.", es: "A través de un gran esfuerzo una vez al mes.", correct: false },
+          { en: "By the store manager alone.", es: "Solo por el gerente de tienda.", correct: false },
+          { en: "Continuously, through small actions repeated throughout the day.", es: "Continuamente, con pequeñas acciones repetidas durante el día.", correct: true },
+          { en: "Only when corporate visits.", es: "Solo cuando visita la oficina corporativa.", correct: false }
+        ],
+        explain: "Excellence is not occasional — it is consistent. Standards are not remembered, they are practiced.",
+        explain_es: "La excelencia no es ocasional — es constante. Los estándares no se recuerdan, se practican." },
+      { q: "What is the purpose of our membership program?", q_es: "¿Cuál es el propósito de nuestro programa de membresías?",
+        options: [
+          { en: "To collect customer phone numbers.", es: "Para recolectar números de teléfono.", correct: false },
+          { en: "To reward loyalty and enhance the customer experience.", es: "Para recompensar la lealtad y mejorar la experiencia del cliente.", correct: true },
+          { en: "To replace store discounts entirely.", es: "Para reemplazar todos los descuentos.", correct: false },
+          { en: "It is optional and rarely mentioned.", es: "Es opcional y rara vez se menciona.", correct: false }
+        ],
+        explain: "The membership program rewards loyalty, enhances savings, and elevates every visit — not as a transaction, but as an upgrade.",
+        explain_es: "El programa de membresía recompensa la lealtad, mejora los ahorros y eleva cada visita — no como una transacción, sino como una mejora." },
+      { q: "Customers should leave the store feeling…?", q_es: "Los clientes deben salir de la tienda sintiéndose…?",
+        options: [
+          { en: "Rushed but satisfied.", es: "Apurados pero satisfechos.", correct: false },
+          { en: "Happy with their purchase, appreciated, and excited to return.", es: "Felices con su compra, valorados, y emocionados de regresar.", correct: true },
+          { en: "Confused about pricing.", es: "Confundidos sobre los precios.", correct: false },
+          { en: "Indifferent — it was just a transaction.", es: "Indiferentes — fue solo una transacción.", correct: false }
+        ],
+        explain: "The goal is always: understand, guide, and connect — so the customer leaves happy and excited to come back.",
+        explain_es: "El objetivo siempre es: entender, guiar y conectar — para que el cliente se vaya feliz y emocionado de volver." },
+      { q: "Which behavior is expected of every team member?", q_es: "¿Cuál comportamiento se espera de cada miembro del equipo?",
+        options: [
+          { en: "Wait quietly behind the counter.", es: "Esperar en silencio detrás del mostrador.", correct: false },
+          { en: "Acknowledge customers immediately and communicate with confidence and warmth.", es: "Reconocer al cliente de inmediato y comunicarse con confianza y calidez.", correct: true },
+          { en: "Focus only on assigned tasks.", es: "Enfocarse solo en las tareas asignadas.", correct: false },
+          { en: "Let the manager handle customer interactions.", es: "Dejar que el gerente atienda al cliente.", correct: false }
+        ],
+        explain: "Energy and presence define our standard — acknowledge customers immediately, communicate warmly, and stay engaged on the floor.",
+        explain_es: "La energía y la presencia definen nuestro estándar — reconocer al cliente al instante, comunicarse con calidez, y mantenerse activo en el piso." },
+      { q: "How should the store environment feel to customers?", q_es: "¿Cómo debe sentirse el ambiente de la tienda para el cliente?",
+        options: [
+          { en: "Quiet and minimal.", es: "Tranquilo y mínimo.", correct: false },
+          { en: "Welcoming, energetic, organized, luxurious, and approachable.", es: "Acogedor, enérgico, organizado, lujoso y accesible.", correct: true },
+          { en: "Strictly formal and exclusive.", es: "Estrictamente formal y exclusivo.", correct: false },
+          { en: "Casual like a convenience store.", es: "Casual como una tienda de conveniencia.", correct: false }
+        ],
+        explain: "Every store should feel welcoming, energetic, organized, luxurious, and approachable at the same time.",
+        explain_es: "Cada tienda debe sentirse acogedora, enérgica, organizada, lujosa y accesible al mismo tiempo." },
+      { q: "What do customers most remember about a visit?", q_es: "¿Qué recuerdan más los clientes de una visita?",
+        options: [
+          { en: "Only the price they paid.", es: "Solo el precio que pagaron.", correct: false },
+          { en: "The greeting, energy, cleanliness, presentation, and how excited they felt.", es: "El saludo, la energía, la limpieza, la presentación y la emoción que sintieron.", correct: true },
+          { en: "The brand of the receipt paper.", es: "La marca del papel del recibo.", correct: false },
+          { en: "How long it took to check out.", es: "Cuánto tardó la cobranza.", correct: false }
+        ],
+        explain: "Customers remember how they were greeted, the energy of the store, cleanliness, presentation, team knowledge, and how excited they felt shopping.",
+        explain_es: "Los clientes recuerdan el saludo, la energía, la limpieza, la presentación, el conocimiento del equipo y la emoción al comprar." },
+      { q: "What is the goal of every customer interaction?", q_es: "¿Cuál es la meta de cada interacción con el cliente?",
+        options: [
+          { en: "Sell as fast as possible.", es: "Vender lo más rápido posible.", correct: false },
+          { en: "Understand, guide, and connect.", es: "Entender, guiar y conectar.", correct: true },
+          { en: "Recommend only the most expensive item.", es: "Recomendar solo el artículo más caro.", correct: false },
+          { en: "Avoid small talk.", es: "Evitar la conversación casual.", correct: false }
+        ],
+        explain: "Our goal is simple: understand the customer, guide them, and create a real connection.",
+        explain_es: "Nuestra meta es simple: entender al cliente, guiarlo y crear una conexión real." }
+    ]
+  },
+
+  {
+    id: "operational",
+    title: "Daily Operations",
+    title_es: "Operaciones Diarias",
+    blurb: "Checklists, breaks & receiving",
+    blurb_es: "Listas de control, descansos y recepción",
+    study: {
+      quote: "Excellence is never left to chance — checklists make it repeatable.",
+      quote_es: "La excelencia nunca se deja al azar — las listas la hacen repetible.",
+      groups: [
+        { heading: "Opening Procedures", heading_es: "Procedimientos de Apertura", items: [
+          { en: "Store cleanliness and presentation readiness.", es: "Limpieza y presentación lista." },
+          { en: "Atmosphere set correctly (lighting, music, scent).", es: "Ambiente correcto (luces, música, aroma)." },
+          { en: "Displays checked and fully presentable.", es: "Exhibidores revisados y presentables." },
+          { en: "POS and systems ready for operation.", es: "POS y sistemas listos para operar." },
+          { en: "Team readiness and appearance check.", es: "Equipo y apariencia revisados." },
+          { en: "Floor walk to ensure a strong first impression.", es: "Caminar la tienda para asegurar una primera impresión fuerte." }
+        ]},
+        { heading: "Closing Procedures", heading_es: "Procedimientos de Cierre", items: [
+          { en: "Store fully cleaned and reset.", es: "Tienda limpia y reorganizada." },
+          { en: "POS closed properly.", es: "POS cerrado correctamente." },
+          { en: "Cash and closing procedures completed accurately.", es: "Procedimientos de efectivo y cierre completados con exactitud." }
+        ]},
+        { heading: "Receiving", heading_es: "Recepción de Mercancía", items: [
+          { en: "Verify shipment accuracy and condition.", es: "Verificar exactitud y condición del envío." },
+          { en: "Report any discrepancies or damages within 24 hours.", es: "Reportar discrepancias o daños dentro de 24 horas." },
+          { en: "Tag and price items accurately.", es: "Etiquetar y poner precio con exactitud." },
+          { en: "Prepare new arrivals for immediate floor placement and feature them.", es: "Preparar las llegadas nuevas para colocar en piso y destacarlas." }
+        ]},
+        { heading: "Timekeeping & Breaks", heading_es: "Control de Tiempo y Descansos", items: [
+          { en: "Less than 6 hours: no lunch required.", es: "Menos de 6 horas: sin descanso obligatorio." },
+          { en: "6+ hours: one 30-minute lunch, taken before 5 hours have passed.", es: "6+ horas: un almuerzo de 30 minutos antes de que pasen 5 horas." },
+          { en: "10+ hours: a second 30-minute lunch required.", es: "10+ horas: un segundo almuerzo de 30 minutos." },
+          { en: "Accurate clock-in/out and manager approval for adjustments.", es: "Entrada/salida exactas y aprobación del gerente para cambios." }
+        ]},
+        { heading: "Sales Floor Conduct", heading_es: "Conducta en el Piso de Ventas", items: [
+          { en: "Greet every customer promptly upon entry.", es: "Saludar a cada cliente rápido al entrar." },
+          { en: "Stay visible and approachable; offer help without waiting to be asked.", es: "Mantenerse visible y accesible; ofrecer ayuda sin esperar." },
+          { en: "Re-engage browsing customers; never leave anyone unattended.", es: "Volver a interactuar con los que miran; nunca dejarlos sin atender." },
+          { en: "Support teammates during busy traffic.", es: "Apoyar al equipo en momentos de mucho tráfico." }
+        ]},
+        { heading: "Floor Standards & Recovery", heading_es: "Estándares de Piso y Recuperación", items: [
+          { en: "Displays always full and visually balanced — no empty gaps.", es: "Exhibidores siempre llenos y balanceados — sin huecos." },
+          { en: "Testers clean and properly placed; best sellers highlighted.", es: "Testers limpios y bien colocados; los más vendidos destacados." },
+          { en: "Continuously straighten displays and return products to correct spots.", es: "Acomodar continuamente y regresar productos a su lugar." },
+          { en: "Clean smudges and fingerprints immediately.", es: "Limpiar manchas y huellas de inmediato." }
+        ]},
+        { heading: "Cash Handling", heading_es: "Manejo de Efectivo", items: [
+          { en: "Accurate ringing of every item.", es: "Cobrar cada artículo con exactitud." },
+          { en: "No rushed checkout; clean and organized register area.", es: "Sin apurar el cobro; área de caja limpia y organizada." },
+          { en: "Follow policy for exchanges.", es: "Seguir la política de cambios." }
+        ]}
+      ]
+    },
+    questions: [
+      { q: "If you are working 6 hours or more, what is required?", q_es: "Si trabaja 6 horas o más, ¿qué se requiere?",
+        options: [
+          { en: "A 15-minute lunch break.", es: "Un descanso para almorzar de 15 minutos.", correct: false },
+          { en: "A 30-minute lunch break before 5 hours have passed.", es: "Un descanso de 30 minutos antes de que pasen 5 horas.", correct: true },
+          { en: "No break is required.", es: "No se requiere descanso.", correct: false },
+          { en: "A 1-hour lunch break.", es: "Un descanso de 1 hora.", correct: false }
+        ],
+        explain: "All lunches must be taken BEFORE 5 hours have passed since the start of your shift. The only exception is shifts under 6 hours.",
+        explain_es: "Todos los almuerzos deben tomarse ANTES de que pasen 5 horas desde el inicio del turno. La única excepción son turnos de menos de 6 horas." },
+      { q: "If you work 10 hours or more, how many 30-minute lunches are required?", q_es: "Si trabaja 10 horas o más, ¿cuántos almuerzos de 30 minutos se requieren?",
+        options: [
+          { en: "One.", es: "Uno.", correct: false },
+          { en: "Two.", es: "Dos.", correct: true },
+          { en: "Three.", es: "Tres.", correct: false },
+          { en: "None — the first one covers it.", es: "Ninguno — el primero lo cubre.", correct: false }
+        ],
+        explain: "10+ hour shifts require a second 30-minute lunch in addition to the first.",
+        explain_es: "Los turnos de 10+ horas requieren un segundo almuerzo de 30 minutos además del primero." },
+      { q: "Within what time must shipment discrepancies or damages be reported?", q_es: "¿Dentro de cuánto tiempo se deben reportar las discrepancias o daños en envíos?",
+        options: [
+          { en: "Within 24 hours of physically receiving the merchandise.", es: "Dentro de las 24 horas después de recibir físicamente la mercancía.", correct: true },
+          { en: "Within one week.", es: "Dentro de una semana.", correct: false },
+          { en: "Whenever the manager remembers.", es: "Cuando el gerente lo recuerde.", correct: false },
+          { en: "Only at the end of the month.", es: "Solo al final del mes.", correct: false }
+        ],
+        explain: "Discrepancies and damages MUST be reported within 24 hours of physically receiving the merchandise.",
+        explain_es: "Las discrepancias y daños DEBEN ser reportados dentro de las 24 horas de recibir físicamente la mercancía." },
+      { q: "Which is part of the Opening Procedures Checklist?", q_es: "¿Cuál es parte de la Lista de Apertura?",
+        options: [
+          { en: "Counting weekly payroll.", es: "Contar la nómina semanal.", correct: false },
+          { en: "Floor walk to ensure first impression is strong.", es: "Caminar la tienda para asegurar una primera impresión fuerte.", correct: true },
+          { en: "Calling all customers individually.", es: "Llamar a todos los clientes individualmente.", correct: false },
+          { en: "Restocking only the back room.", es: "Solo reabastecer la bodega.", correct: false }
+        ],
+        explain: "Opening includes cleanliness check, atmosphere setting, displays, POS readiness, team appearance, and a floor walk.",
+        explain_es: "La apertura incluye limpieza, ambiente, exhibidores, POS listo, apariencia del equipo, y una caminata por la tienda." },
+      { q: "On the sales floor, what should you NOT do?", q_es: "En el piso de ventas, ¿qué NO debe hacer?",
+        options: [
+          { en: "Greet customers promptly upon entry.", es: "Saludar a los clientes rápido al entrar.", correct: false },
+          { en: "Maintain a visible and approachable presence.", es: "Mantener una presencia visible y accesible.", correct: false },
+          { en: "Wait to be asked before offering help.", es: "Esperar a que le pregunten antes de ofrecer ayuda.", correct: true },
+          { en: "Support teammates during busy traffic.", es: "Apoyar a sus compañeros durante el tráfico intenso.", correct: false }
+        ],
+        explain: "Offer assistance consistently without waiting to be asked. Never ignore or leave a customer unattended.",
+        explain_es: "Ofrezca ayuda constantemente sin esperar a que le pregunten. Nunca ignore ni deje a un cliente sin atender." },
+      { q: "What is required during mid-shift store recovery?", q_es: "¿Qué se requiere durante la recuperación de la tienda a media jornada?",
+        options: [
+          { en: "Wait until closing to fix displays.", es: "Esperar hasta el cierre para acomodar exhibidores.", correct: false },
+          { en: "Continuously straighten displays, clean smudges immediately, reset high-traffic areas.", es: "Acomodar continuamente, limpiar manchas de inmediato, reorganizar áreas de mucho tráfico.", correct: true },
+          { en: "Only reset the front entrance.", es: "Solo reorganizar la entrada.", correct: false },
+          { en: "Leave testers wherever customers placed them.", es: "Dejar los testers donde los clientes los pusieron.", correct: false }
+        ],
+        explain: "The store should never look 'picked over.' Maintain organized tester stations and reset high-traffic areas regularly throughout the day.",
+        explain_es: "La tienda nunca debe verse desordenada. Mantén estaciones de tester organizadas y reorganiza áreas de tráfico durante el día." },
+      { q: "What is expected of floor displays at all times?", q_es: "¿Qué se espera de los exhibidores en todo momento?",
+        options: [
+          { en: "Empty shelves are fine if items are out of stock.", es: "Estantes vacíos están bien si no hay producto.", correct: false },
+          { en: "Full, visually balanced, with no empty gaps or messy shelves.", es: "Llenos, visualmente balanceados, sin huecos ni estantes desordenados.", correct: true },
+          { en: "Rearranged only once a month.", es: "Reordenados solo una vez al mes.", correct: false },
+          { en: "Signage is optional.", es: "La señalización es opcional.", correct: false }
+        ],
+        explain: "Displays must always be full and balanced. Testers clean, best sellers rotated, new arrivals featured, and all pricing accurate.",
+        explain_es: "Los exhibidores deben estar siempre llenos y balanceados. Testers limpios, los más vendidos rotados, llegadas nuevas destacadas y precios correctos." },
+      { q: "What is required during checkout / cash handling?", q_es: "¿Qué se requiere durante el cobro / manejo de efectivo?",
+        options: [
+          { en: "Speed over accuracy.", es: "Velocidad sobre exactitud.", correct: false },
+          { en: "Accurate ringing of all items, proper cash handling, no rushed checkout, clean register area.", es: "Cobrar todo con exactitud, manejar el efectivo correctamente, sin apurar y caja limpia.", correct: true },
+          { en: "Hand customers their change without counting.", es: "Dar el cambio sin contar.", correct: false },
+          { en: "Skip exchanges if the line is long.", es: "Saltarse los cambios si hay fila.", correct: false }
+        ],
+        explain: "Cash handling demands accuracy, professionalism, and a clean register area. Follow policy for exchanges every time.",
+        explain_es: "El manejo de efectivo exige exactitud, profesionalismo y caja limpia. Sigue la política de cambios siempre." },
+      { q: "How should new arrivals be handled at receiving?", q_es: "¿Cómo se debe manejar la mercancía nueva al recibirla?",
+        options: [
+          { en: "Stack in the back room until next month.", es: "Apilar en la bodega hasta el próximo mes.", correct: false },
+          { en: "Tag, price, and prepare for immediate floor placement — feature as a new arrival.", es: "Etiquetar, poner precio y preparar para colocar en piso de inmediato — destacar como llegada nueva.", correct: true },
+          { en: "Open boxes only when customers request something.", es: "Abrir cajas solo cuando los clientes pidan algo.", correct: false },
+          { en: "Wait for the manager's instructions before doing anything.", es: "Esperar instrucciones del gerente antes de hacer algo.", correct: false }
+        ],
+        explain: "New product enters the store at La Mina Standard — accurately tagged, priced, prepped for floor, and highlighted as a featured moment.",
+        explain_es: "El producto nuevo entra al Estándar La Mina — etiquetado, con precio, listo para el piso y destacado como momento especial." },
+      { q: "Which is required for team energy and communication?", q_es: "¿Qué se requiere para la energía y comunicación del equipo?",
+        options: [
+          { en: "Working in isolation to focus.", es: "Trabajar aislado para concentrarse.", correct: false },
+          { en: "Clear communication, supporting teammates, positive tone, quick response when help is needed.", es: "Comunicación clara, apoyar al equipo, tono positivo, respuesta rápida cuando se necesita ayuda.", correct: true },
+          { en: "Speaking only to your assigned customers.", es: "Hablar solo con los clientes asignados.", correct: false },
+          { en: "Letting busy areas handle themselves.", es: "Dejar que las áreas ocupadas se manejen solas.", correct: false }
+        ],
+        explain: "We succeed together. Clear communication, positive body language, and quick response to teammates needs keep the store strong.",
+        explain_es: "Triunfamos juntos. Comunicación clara, lenguaje corporal positivo y respuesta rápida al equipo mantienen la tienda fuerte." }
+    ]
+  },
+
+  {
+    id: "whatsapp",
+    title: "WhatsApp Sales",
+    title_es: "Ventas por WhatsApp",
+    blurb: "Scripts, closing & response time",
+    blurb_es: "Guiones, cierre y tiempo de respuesta",
+    study: {
+      quote: "The difference between a salesperson and a catalog is that the salesperson closes.",
+      quote_es: "La diferencia entre un vendedor y un catálogo es que el vendedor cierra.",
+      groups: [
+        { heading: "Fundamental Principle", heading_es: "Principio Fundamental", items: [
+          { en: "Every WhatsApp message has ONE goal: move toward the close.", es: "Cada mensaje de WhatsApp tiene UN objetivo: avanzar hacia el cierre." },
+          { en: "Message → catalog with photo → call or visit → payment.", es: "Mensaje → catálogo con foto → llamada o visita → pago." }
+        ]},
+        { heading: "Response Time", heading_es: "Tiempo de Respuesta", items: [
+          { en: "78% of sales close with whoever responds first.", es: "El 78% de las ventas las cierra quien responde primero." },
+          { en: "Maximum first response: 3 minutes during store hours.", es: "Primera respuesta máxima: 3 minutos en horario de tienda." },
+          { en: "Hot lead: respond IMMEDIATELY — interrupt what you're doing.", es: "Lead caliente: responder DE INMEDIATO — interrumpa lo que está haciendo." }
+        ]},
+        { heading: "Lead Types", heading_es: "Tipos de Leads", items: [
+          { en: "Hot: urgent + specific product → close now, propose visit/payment.", es: "Caliente: urgente + producto específico → cerrar ahora, proponer visita/pago." },
+          { en: "Warm: asks price, no urgency → give value, send photo, closing question.", es: "Tibio: pide precio sin urgencia → dar valor, enviar foto, pregunta de cierre." },
+          { en: "Returning: previous buyer → personalize, recommend complement, VIP treatment.", es: "Recurrente: compró antes → personalizar, recomendar complemento, trato VIP." },
+          { en: "Gift: discover who, occasion, preferences → recommend with confidence.", es: "Regalo: descubrir para quién, ocasión, preferencias → recomendar con seguridad." },
+          { en: "Cold: only asks price → qualify FIRST, then create curiosity.", es: "Frío: solo pide precio → calificar PRIMERO, luego crear curiosidad." }
+        ]},
+        { heading: "Rule of 3 Follow-Ups", heading_es: "Regla de 3 Seguimientos", items: [
+          { en: "Follow-up 1: 4–6 hours after silence.", es: "Seguimiento 1: 4–6 horas después del silencio." },
+          { en: "Follow-up 2: next day with a NEW reason (promo, low stock, new arrival).", es: "Seguimiento 2: al día siguiente con un motivo NUEVO (promo, poco stock, nuevo)." },
+          { en: "Follow-up 3: 3 days later with a final friendly tone.", es: "Seguimiento 3: 3 días después con tono amable final." },
+          { en: "After #3: mark cold, reactivate in 30 days with something new.", es: "Después del #3: marcar frío, reactivar en 30 días con algo nuevo." }
+        ]},
+        { heading: "Closing Techniques", heading_es: "Técnicas de Cierre", items: [
+          { en: "Double-Option Close — A or B, never 'do you want it?'", es: "Cierre de Doble Opción — A o B, nunca '¿lo quieres?'" },
+          { en: "Real Urgency — limited stock, discontinued, seasonal.", es: "Urgencia Real — stock limitado, descontinuado, temporada." },
+          { en: "Live Photo/Video — 20–30 sec video triples closing rate.", es: "Foto/Video en Vivo — un video de 20–30 seg triplica la tasa de cierre." },
+          { en: "Social Proof — best seller, testimonials.", es: "Prueba Social — más vendido, testimonios." },
+          { en: "Hold/Reservation — 30–50% down, hold until visit.", es: "Apartado — 30–50% de anticipo, mantener hasta la visita." },
+          { en: "Value vs Price — cost per use, concentration, longevity.", es: "Valor vs Precio — costo por uso, concentración, duración." }
+        ]},
+        { heading: "Upselling — Offer BEFORE Payment", heading_es: "Upselling — Ofrecer ANTES del Pago", items: [
+          { en: "Set (perfume + lotion) — boosts longevity.", es: "Set (perfume + loción) — aumenta duración." },
+          { en: "Travel size 30ml — purse companion.", es: "Tamaño viaje 30ml — para llevar." },
+          { en: "Second scent — day/night fragrance wardrobe.", es: "Segunda fragancia — guardarropa de día/noche." },
+          { en: "Home fragrance — extends the scent experience.", es: "Aroma para el hogar — extiende la experiencia." }
+        ]},
+        { heading: "8 Mistakes That Kill Sales", heading_es: "8 Errores que Matan Ventas", items: [
+          { en: "Replying with price only, no value.", es: "Responder solo con precio, sin valor." },
+          { en: "Taking longer than 5 minutes to reply.", es: "Tardar más de 5 minutos en responder." },
+          { en: "Not following up after silence.", es: "No dar seguimiento tras silencio." },
+          { en: "Sending the full catalog with no personalization.", es: "Enviar el catálogo completo sin personalizar." },
+          { en: "No photos or videos of the real product.", es: "No enviar fotos o videos del producto real." },
+          { en: "Lowering price at the first objection.", es: "Bajar el precio en la primera objeción." },
+          { en: "Closing the chat after 'I'll think about it'.", es: "Cerrar el chat tras 'lo voy a pensar'." },
+          { en: "Skipping the upsell before payment.", es: "Saltarse el upsell antes del pago." }
+        ]}
+      ]
+    },
+    questions: [
+      { q: "What is the goal of every WhatsApp message?", q_es: "¿Cuál es la meta de cada mensaje de WhatsApp?",
+        options: [
+          { en: "To give the customer all available information.", es: "Darle al cliente toda la información disponible.", correct: false },
+          { en: "To move toward the close.", es: "Avanzar hacia el cierre.", correct: true },
+          { en: "To be friendly and casual.", es: "Ser amigable y casual.", correct: false },
+          { en: "To list every product we carry.", es: "Listar cada producto que tenemos.", correct: false }
+        ],
+        explain: "The difference between a salesperson and a catalog is that the salesperson closes. If your reply doesn't move toward a close, rewrite it.",
+        explain_es: "La diferencia entre un vendedor y un catálogo es que el vendedor cierra. Si tu respuesta no avanza al cierre, reescríbela." },
+      { q: "What is the maximum first-response time during store hours?", q_es: "¿Cuál es el tiempo máximo de primera respuesta durante el horario de la tienda?",
+        options: [
+          { en: "10 minutes.", es: "10 minutos.", correct: false },
+          { en: "30 minutes.", es: "30 minutos.", correct: false },
+          { en: "3 minutes.", es: "3 minutos.", correct: true },
+          { en: "1 hour.", es: "1 hora.", correct: false }
+        ],
+        explain: "78% of sales are closed by whoever responds first. After 5 minutes, conversion drops by half. Maximum: 3 minutes.",
+        explain_es: "El 78% de las ventas las cierra quien responde primero. Después de 5 minutos, la conversión baja a la mitad. Máximo: 3 minutos." },
+      { q: "What is the rule of follow-ups when a customer goes silent?", q_es: "¿Cuál es la regla de seguimientos cuando un cliente no responde?",
+        options: [
+          { en: "Follow up 10 times until they reply.", es: "Hacer seguimiento 10 veces hasta que responda.", correct: false },
+          { en: "Send one follow-up and give up.", es: "Enviar un seguimiento y rendirse.", correct: false },
+          { en: "Three follow-ups: 4–6 hours, next day, 3 days later.", es: "Tres seguimientos: 4–6 horas, al día siguiente, 3 días después.", correct: true },
+          { en: "Wait two weeks before any follow-up.", es: "Esperar dos semanas antes de cualquier seguimiento.", correct: false }
+        ],
+        explain: "Rule of 3: follow-up at 4–6 hours, then the next day with a new reason, then 3 days later with a final friendly tone.",
+        explain_es: "Regla de 3: seguimiento a las 4–6 horas, al día siguiente con un motivo nuevo, y 3 días después con un tono amable final." },
+      { q: "A customer says 'It's too expensive.' What should you do FIRST?", q_es: "Un cliente dice 'Es muy caro.' ¿Qué debe hacer PRIMERO?",
+        options: [
+          { en: "Immediately offer a discount.", es: "Ofrecer un descuento de inmediato.", correct: false },
+          { en: "Raise the perceived value — cost per use, quality, longevity.", es: "Elevar el valor percibido — costo por uso, calidad, duración.", correct: true },
+          { en: "Tell them to look on Amazon.", es: "Decirles que busquen en Amazon.", correct: false },
+          { en: "Stop replying.", es: "Dejar de responder.", correct: false }
+        ],
+        explain: "Don't lower the price — raise the perceived value. Lowering at the first objection is mistake #6 in the manual.",
+        explain_es: "No bajes el precio — eleva el valor percibido. Bajar al primer objeción es el error #6 en el manual." },
+      { q: "When is the BEST moment to offer an upsell on WhatsApp?", q_es: "¿Cuál es el MEJOR momento para ofrecer un upsell por WhatsApp?",
+        options: [
+          { en: "After the customer has already paid.", es: "Después de que el cliente ya pagó.", correct: false },
+          { en: "Right before confirming payment.", es: "Justo antes de confirmar el pago.", correct: true },
+          { en: "A week after the sale.", es: "Una semana después de la venta.", correct: false },
+          { en: "Only if the customer asks.", es: "Solo si el cliente pregunta.", correct: false }
+        ],
+        explain: "Offer upselling at the moment of highest buying energy — right before payment. Afterward, the impulse drops.",
+        explain_es: "Ofrece el upsell en el momento de mayor energía de compra — justo antes del pago. Después, el impulso baja." },
+      { q: "A 'cold/curious lead' only asks for prices with no context. What should you do?", q_es: "Un 'lead frío' solo pregunta precios sin dar contexto. ¿Qué debe hacer?",
+        options: [
+          { en: "Send the price immediately so they don't leave.", es: "Enviar el precio inmediato para que no se vaya.", correct: false },
+          { en: "Ask a qualifying question first to create curiosity.", es: "Hacer una pregunta calificadora primero para crear curiosidad.", correct: true },
+          { en: "Send a long catalog.", es: "Enviar un catálogo largo.", correct: false },
+          { en: "Tell them to come to the store.", es: "Decirles que vengan a la tienda.", correct: false }
+        ],
+        explain: "Cold leads need qualification first. Don't drop the price — create curiosity by asking what they're looking for.",
+        explain_es: "Los leads fríos necesitan calificación primero. No des el precio — crea curiosidad preguntando qué buscan." },
+      { q: "What is the Double-Option Close?", q_es: "¿Qué es el Cierre de Doble Opción?",
+        options: [
+          { en: "Asking 'Do you want to buy it?'", es: "Preguntar '¿Lo quieres comprar?'", correct: false },
+          { en: "Offering two choices that both assume the sale (A or B).", es: "Ofrecer dos opciones que ambas asumen la venta (A o B).", correct: true },
+          { en: "Sending two messages back to back.", es: "Enviar dos mensajes seguidos.", correct: false },
+          { en: "Letting the customer decide alone.", es: "Dejar que el cliente decida solo.", correct: false }
+        ],
+        explain: "Instead of 'Do you want it?', offer two options that both assume purchase — e.g. '50ml or 100ml?' or 'Pick up today or ship?'",
+        explain_es: "En vez de '¿Lo quieres?', ofrece dos opciones que asumen la compra — ej. '¿50ml o 100ml?' o '¿Recoger hoy o enviar?'" },
+      { q: "What is one of our biggest competitive advantages over Amazon on WhatsApp?", q_es: "¿Cuál es una de nuestras mayores ventajas competitivas sobre Amazon en WhatsApp?",
+        options: [
+          { en: "Lower prices on every item.", es: "Precios más bajos en cada artículo.", correct: false },
+          { en: "Sending personalized photos and 20–30 second videos of the real product.", es: "Enviar fotos personalizadas y videos de 20–30 segundos del producto real.", correct: true },
+          { en: "Free shipping on everything.", es: "Envío gratis en todo.", correct: false },
+          { en: "Same-day delivery nationwide.", es: "Entrega el mismo día a nivel nacional.", correct: false }
+        ],
+        explain: "Amazon cannot send a personalized video. A short video showing the real bottle, packaging, and spray creates trust no e-commerce can match.",
+        explain_es: "Amazon no puede enviar un video personalizado. Un video corto mostrando la botella, el empaque y la fragancia crea confianza inigualable." },
+      { q: "How should you handle a wholesale lead on WhatsApp?", q_es: "¿Cómo debe manejar un lead de mayoreo en WhatsApp?",
+        options: [
+          { en: "Send full pricing and contracts via message.", es: "Enviar precios completos y contratos por mensaje.", correct: false },
+          { en: "Move them to a call or in-person meeting to build trust and close faster.", es: "Pasarlos a una llamada o reunión en persona para crear confianza y cerrar más rápido.", correct: true },
+          { en: "Ignore them — wholesale is too complicated.", es: "Ignorarlos — el mayoreo es complicado.", correct: false },
+          { en: "Wait for them to come to the store.", es: "Esperar a que vengan a la tienda.", correct: false }
+        ],
+        explain: "Wholesale is high-ticket and long-term. WhatsApp starts the conversation — always move to a call or visit to close faster.",
+        explain_es: "El mayoreo es ticket alto y largo plazo. WhatsApp inicia la conversación — siempre pasa a llamada o visita para cerrar más rápido." },
+      { q: "What is the Hold / Reservation Close?", q_es: "¿Qué es el Cierre de Apartado / Reservación?",
+        options: [
+          { en: "Telling the customer the price is firm.", es: "Decirle al cliente que el precio es firme.", correct: false },
+          { en: "Holding the product with 30–50% down so they can pay the rest at pickup.", es: "Apartar el producto con 30–50% de anticipo para que paguen el resto al recoger.", correct: true },
+          { en: "Refusing to hold any item.", es: "Negarse a apartar cualquier artículo.", correct: false },
+          { en: "Letting the customer take it home and pay later.", es: "Dejar que el cliente lo lleve y pague después.", correct: false }
+        ],
+        explain: "When a customer has a logistical objection, hold with 30%+ down via transfer/digital payment — removes friction without losing the sale.",
+        explain_es: "Cuando hay una objeción logística, aparta con 30%+ por transferencia/pago digital — quita la fricción sin perder la venta." }
+    ]
+  },
+
+  {
+    id: "merchandising",
+    title: "Merchandising & New Products",
+    title_es: "Exhibición y Productos Nuevos",
+    blurb: "Display, knowledge & wholesale support",
+    blurb_es: "Exhibición, conocimiento y mayoreo",
+    study: {
+      quote: "The way we present a product can turn a simple sale into a memorable experience.",
+      quote_es: "Cómo presentamos un producto puede transformar una venta simple en una experiencia memorable.",
+      groups: [
+        { heading: "Display & Merchandising", heading_es: "Exhibición y Merchandising", items: [
+          { en: "Place new products in visible, high-traffic areas as our newest arrivals.", es: "Coloca productos nuevos en áreas visibles y de alto tráfico como llegadas más recientes." },
+          { en: "Keep displays clean, organized, and visually appealing at all times.", es: "Mantén exhibidores limpios, organizados y visualmente atractivos." },
+          { en: "Use store TVs (Moval & Fontana) to promote with brand videos, influencer content, and reviews.", es: "Usa las TVs (Moval y Fontana) para promover con videos de marca, influencers y reseñas." }
+        ]},
+        { heading: "Product Knowledge", heading_es: "Conocimiento del Producto", items: [
+          { en: "Research every product before selling — Fragrantica is the recommended tool.", es: "Investiga cada producto antes de venderlo — Fragrantica es la herramienta recomendada." },
+          { en: "Know: notes, scent profile, longevity, projection, what makes it unique.", es: "Conoce: notas, perfil, duración, proyección, lo que lo hace único." },
+          { en: "Know the ideal customer profile, best season (warm/cold), and occasion (office, gym, date, daily, special events).", es: "Conoce el perfil del cliente ideal, mejor estación (calor/frío) y ocasión (oficina, gym, cita, diario, especial)." }
+        ]},
+        { heading: "Customer Experience During the Sale", heading_es: "Experiencia Durante la Venta", items: [
+          { en: "Use tester programs whenever available.", es: "Usa programas de tester cuando estén disponibles." },
+          { en: "Apply fragrance properly and explain how the scent develops over time.", es: "Aplica la fragancia correctamente y explica cómo el aroma evoluciona." },
+          { en: "Connect the fragrance to a lifestyle, mood, or experience.", es: "Conecta la fragancia con un estilo de vida, ánimo o experiencia." },
+          { en: "Help customers imagine when and where they would wear it.", es: "Ayuda al cliente a imaginar cuándo y dónde la usaría." }
+        ]},
+        { heading: "Sales Goals — New Products", heading_es: "Metas de Ventas — Productos Nuevos", items: [
+          { en: "Perry Ellis: 15 pieces per salesperson per week.", es: "Perry Ellis: 15 piezas por vendedor por semana." },
+          { en: "Benchmark week: 2,184 pieces sold company-wide.", es: "Semana de referencia: 2,184 piezas vendidas en total." },
+          { en: "Set minimum weekly goals for each new product.", es: "Establece metas mínimas semanales para cada producto nuevo." }
+        ]},
+        { heading: "Wholesale Customer Support", heading_es: "Apoyo a Cliente de Mayoreo", items: [
+          { en: "Teach how to promote effectively and identify their target customer.", es: "Enseña cómo promover efectivamente e identificar a su cliente objetivo." },
+          { en: "Suggest retail pricing — use Macy's as a market reference.", es: "Sugiere precios al menudeo — usa Macy's como referencia." },
+          { en: "Pass on our selling techniques so they can grow their own business.", es: "Comparte nuestras técnicas de venta para que crezcan su propio negocio." }
+        ]}
+      ]
+    },
+    questions: [
+      { q: "When a new product arrives, where should it be placed?", q_es: "Cuando llega un producto nuevo, ¿dónde debe colocarse?",
+        options: [
+          { en: "In the back so it stays clean.", es: "En la trastienda para mantenerlo limpio.", correct: false },
+          { en: "Wherever there is empty space.", es: "Donde haya espacio vacío.", correct: false },
+          { en: "In visible, high-traffic areas as our newest arrival.", es: "En áreas visibles y de alto tráfico como nuestra novedad.", correct: true },
+          { en: "Mixed in randomly with old stock.", es: "Mezclado al azar con el inventario viejo.", correct: false }
+        ],
+        explain: "Present new products as one of our newest and most exciting arrivals — clean, organized, in visible high-traffic spots.",
+        explain_es: "Presenta los nuevos productos como una de nuestras llegadas más nuevas y emocionantes — limpios, organizados, en áreas visibles." },
+      { q: "What tool is recommended for researching a fragrance's notes?", q_es: "¿Qué herramienta se recomienda para investigar las notas de una fragancia?",
+        options: [
+          { en: "Wikipedia.", es: "Wikipedia.", correct: false },
+          { en: "Fragrantica.", es: "Fragrantica.", correct: true },
+          { en: "The brand's TikTok.", es: "El TikTok de la marca.", correct: false },
+          { en: "Just guess based on the bottle.", es: "Adivinar basado en la botella.", correct: false }
+        ],
+        explain: "Fragrantica is the recommended tool to research notes, scent profile, longevity, and what makes a fragrance unique.",
+        explain_es: "Fragrantica es la herramienta recomendada para investigar notas, perfil, duración y lo que hace única a una fragancia." },
+      { q: "Which two stores have TVs available for promoting new products?", q_es: "¿Cuáles dos tiendas tienen TVs disponibles para promocionar productos nuevos?",
+        options: [
+          { en: "Moval and Fontana.", es: "Moval y Fontana.", correct: true },
+          { en: "All stores.", es: "Todas las tiendas.", correct: false },
+          { en: "Only the warehouse.", es: "Solo el almacén.", correct: false },
+          { en: "Just the flagship.", es: "Solo la principal.", correct: false }
+        ],
+        explain: "Moval and Fontana have TVs for promoting brand videos, influencer content, and product reviews.",
+        explain_es: "Moval y Fontana tienen TVs para promocionar videos de marca, contenido de influencers y reseñas." },
+      { q: "When supporting a wholesale customer, what should we help them with?", q_es: "Al apoyar a un cliente de mayoreo, ¿en qué debemos ayudarlo?",
+        options: [
+          { en: "Nothing — just sell to them.", es: "Nada — solo venderles.", correct: false },
+          { en: "How to promote, who to target, suggested retail pricing (using Macy's as reference).", es: "Cómo promover, a quién dirigirse, precios sugeridos (usando Macy's como referencia).", correct: true },
+          { en: "Lending them our store displays.", es: "Prestarles nuestros exhibidores.", correct: false },
+          { en: "Discouraging them from selling.", es: "Desanimarlos de vender.", correct: false }
+        ],
+        explain: "Teach wholesale customers how to promote effectively, who their target customer is, and suggested retail pricing using market references like Macy's.",
+        explain_es: "Enseña a los clientes de mayoreo cómo promover, su cliente objetivo y precios sugeridos usando referencias como Macy's." },
+      { q: "What is the weekly Perry Ellis sales goal per person?", q_es: "¿Cuál es la meta semanal de Perry Ellis por persona?",
+        options: [
+          { en: "5 pieces.", es: "5 piezas.", correct: false },
+          { en: "10 pieces.", es: "10 piezas.", correct: false },
+          { en: "15 pieces.", es: "15 piezas.", correct: true },
+          { en: "30 pieces.", es: "30 piezas.", correct: false }
+        ],
+        explain: "Perry Ellis target: 15 pieces per person per week. Last benchmark week: 2,184 pieces sold company-wide.",
+        explain_es: "Meta de Perry Ellis: 15 piezas por persona por semana. Semana de referencia: 2,184 piezas vendidas en total." },
+      { q: "What is essential to teach the customer about a new fragrance?", q_es: "¿Qué es esencial enseñarle al cliente sobre una fragancia nueva?",
+        options: [
+          { en: "Only the price.", es: "Solo el precio.", correct: false },
+          { en: "Notes, longevity, ideal occasions/seasons, and what makes it unique.", es: "Notas, duración, ocasiones/estaciones ideales y lo que la hace única.", correct: true },
+          { en: "Just the brand name.", es: "Solo el nombre de la marca.", correct: false },
+          { en: "Nothing — let them smell it.", es: "Nada — que la huelan.", correct: false }
+        ],
+        explain: "Customers trust us as experts. They need notes, scent style, longevity, projection, and best occasions — that's what creates confidence.",
+        explain_es: "Los clientes nos ven como expertos. Necesitan notas, estilo, duración, proyección y mejores ocasiones — eso crea confianza." },
+      { q: "How should new product be promoted during the sale?", q_es: "¿Cómo se debe promover un producto nuevo durante la venta?",
+        options: [
+          { en: "Just point to it on the shelf.", es: "Solo señalarlo en el estante.", correct: false },
+          { en: "Use testers, apply properly, explain how the scent develops, connect to lifestyle/occasion.", es: "Usar testers, aplicarlo bien, explicar cómo evoluciona el aroma, conectarlo a estilo/ocasión.", correct: true },
+          { en: "Hand them the box and let them decide.", es: "Darle la caja y que decida.", correct: false },
+          { en: "Talk about other products instead.", es: "Hablar de otros productos.", correct: false }
+        ],
+        explain: "Use tester programs when available, apply properly, explain how the scent develops over time, and connect the fragrance to a mood or moment.",
+        explain_es: "Usa los testers cuando estén disponibles, aplica bien, explica la evolución del aroma y conecta la fragancia a un ánimo o momento." },
+      { q: "How should TVs at Moval and Fontana be used?", q_es: "¿Cómo se deben usar las TVs en Moval y Fontana?",
+        options: [
+          { en: "For background music only.", es: "Solo para música de fondo.", correct: false },
+          { en: "Brand videos, influencer content, and product reviews / promotional campaigns.", es: "Videos de marca, contenido de influencers, reseñas / campañas promocionales.", correct: true },
+          { en: "Personal entertainment for staff.", es: "Entretenimiento para el personal.", correct: false },
+          { en: "Turned off to save energy.", es: "Apagadas para ahorrar energía.", correct: false }
+        ],
+        explain: "Use TVs to promote new products with official brand videos, influencer content, reviews, and promotional campaigns.",
+        explain_es: "Usa las TVs para promover nuevos productos con videos oficiales de marca, influencers, reseñas y campañas promocionales." },
+      { q: "What added value do we offer wholesale customers beyond product?", q_es: "¿Qué valor adicional ofrecemos al cliente de mayoreo además del producto?",
+        options: [
+          { en: "Lower prices than retail competitors.", es: "Precios más bajos que la competencia minorista.", correct: false },
+          { en: "Sales education, product knowledge, and selling techniques to grow their business.", es: "Educación en ventas, conocimiento de producto y técnicas para crecer su negocio.", correct: true },
+          { en: "Free uniforms.", es: "Uniformes gratis.", correct: false },
+          { en: "Personal phone support 24/7.", es: "Soporte telefónico 24/7.", correct: false }
+        ],
+        explain: "Through our knowledge and experience, we help wholesale customers improve sales skills, understand positioning, and grow successfully.",
+        explain_es: "Con nuestro conocimiento y experiencia, ayudamos a los clientes de mayoreo a mejorar ventas, entender posicionamiento y crecer." }
+    ]
+  },
+
+  {
+    id: "kpis",
+    title: "KPIs & Goals",
+    title_es: "KPIs y Metas",
+    blurb: "Targets, calls & store standards",
+    blurb_es: "Metas, llamadas y estándares",
+    study: {
+      quote: "What is not measured does not improve.",
+      quote_es: "Lo que no se mide, no mejora.",
+      groups: [
+        { heading: "Customer Outreach Calls", heading_es: "Llamadas de Seguimiento", items: [
+          { en: "150 calls per week, per store.", es: "150 llamadas por semana, por tienda." },
+          { en: "Use store phone or store cellphone — must be separate from WhatsApp.", es: "Usar teléfono de la tienda — separado de WhatsApp." },
+          { en: "Tracked in Axion. Met = 150+, Not Met = below.", es: "Registrado en Axion. Cumplido = 150+, No cumplido = menos." },
+          { en: "Spread throughout the week with professionalism and purpose.", es: "Distribuidas en la semana con profesionalismo y propósito." }
+        ]},
+        { heading: "WhatsApp Conversion Rate", heading_es: "Tasa de Conversión WhatsApp", items: [
+          { en: "Minimum acceptable: 25%.", es: "Mínimo aceptable: 25%." },
+          { en: "Operational goal: 35–40%.", es: "Meta operativa: 35–40%." },
+          { en: "Excellent: 50% or more.", es: "Excelente: 50% o más." },
+          { en: "Critical concern: below 15%.", es: "Preocupación crítica: menos del 15%." }
+        ]},
+        { heading: "Store Standards Score", heading_es: "Puntaje de Estándares", items: [
+          { en: "Tracked weekly on 1–5 scale.", es: "Medido semanalmente en escala 1–5." },
+          { en: "Goal: 4 or higher every week.", es: "Meta: 4 o más cada semana." },
+          { en: "Covers opening, closing, cleanliness, displays, testers, recovery.", es: "Cubre apertura, cierre, limpieza, exhibidores, testers, recuperación." }
+        ]},
+        { heading: "Customer Experience (Google Reviews)", heading_es: "Experiencia del Cliente (Reseñas)", items: [
+          { en: "Minimum 5 Google Reviews per store, per month.", es: "Mínimo 5 reseñas de Google por tienda, por mes." },
+          { en: "Focus on service quality and overall experience feedback.", es: "Enfocado en calidad de servicio y experiencia general." },
+          { en: "Tracked as a 1–5 star score.", es: "Medido como puntaje de 1–5 estrellas." }
+        ]},
+        { heading: "Sales Execution Targets", heading_es: "Metas de Ejecución de Ventas", items: [
+          { en: "Monthly sales goal % to target — on track / behind / ahead.", es: "Meta de ventas mensual % — en camino / atrás / adelante." },
+          { en: "Exclusive items: 10 pieces/week per salesperson.", es: "Artículos exclusivos: 10 piezas/semana por vendedor." },
+          { en: "Liquidation / clearance: 10 pieces/week.", es: "Liquidación: 10 piezas/semana." },
+          { en: "New products (30 days or less): 5 pieces/week.", es: "Productos nuevos (30 días o menos): 5 piezas/semana." }
+        ]},
+        { heading: "Celerant Source Field", heading_es: "Campo Source en Celerant", items: [
+          { en: "All new customers must have the Source field completed.", es: "Todos los clientes nuevos deben tener el campo Source completo." },
+          { en: "Minimum acceptable: 50% of new customers.", es: "Mínimo aceptable: 50% de clientes nuevos." },
+          { en: "Excellent: 80% or more.", es: "Excelente: 80% o más." },
+          { en: "Critical concern: below 15%.", es: "Preocupación crítica: menos del 15%." }
+        ]}
+      ]
+    },
+    questions: [
+      { q: "How many customer outreach calls must each store complete per week?", q_es: "¿Cuántas llamadas de seguimiento al cliente debe completar cada tienda por semana?",
+        options: [
+          { en: "50.", es: "50.", correct: false },
+          { en: "100.", es: "100.", correct: false },
+          { en: "150.", es: "150.", correct: true },
+          { en: "300.", es: "300.", correct: false }
+        ],
+        explain: "Each store must complete 150 calls per week. They must be made using the store phone or store cellphone — separate from WhatsApp.",
+        explain_es: "Cada tienda debe completar 150 llamadas por semana usando el teléfono de la tienda — separado de WhatsApp." },
+      { q: "What is the operational goal for WhatsApp-to-Sale conversion?", q_es: "¿Cuál es la meta operativa de conversión de WhatsApp a venta?",
+        options: [
+          { en: "10–15%.", es: "10–15%.", correct: false },
+          { en: "25%.", es: "25%.", correct: false },
+          { en: "35–40%.", es: "35–40%.", correct: true },
+          { en: "70%+.", es: "70%+.", correct: false }
+        ],
+        explain: "Minimum acceptable is 25%, operational goal is 35–40%, excellent is 50%+, and critical concern is below 15%.",
+        explain_es: "Mínimo aceptable 25%, meta operativa 35–40%, excelente 50%+, y preocupación crítica por debajo de 15%." },
+      { q: "What is the weekly Store Standards Score goal?", q_es: "¿Cuál es la meta del Puntaje de Estándares de Tienda semanal?",
+        options: [
+          { en: "2 or higher.", es: "2 o más.", correct: false },
+          { en: "3 or higher.", es: "3 o más.", correct: false },
+          { en: "4 or higher.", es: "4 o más.", correct: true },
+          { en: "There is no specific goal.", es: "No hay meta específica.", correct: false }
+        ],
+        explain: "Store Standards are tracked weekly on a 1–5 scale: goal is 4 or higher every week.",
+        explain_es: "Los Estándares de Tienda se miden semanalmente en escala 1–5: la meta es 4 o más cada semana." },
+      { q: "What is the minimum monthly Google Reviews goal per store?", q_es: "¿Cuál es la meta mínima mensual de reseñas de Google por tienda?",
+        options: [
+          { en: "1 review.", es: "1 reseña.", correct: false },
+          { en: "5 reviews.", es: "5 reseñas.", correct: true },
+          { en: "20 reviews.", es: "20 reseñas.", correct: false },
+          { en: "None required.", es: "No se requiere.", correct: false }
+        ],
+        explain: "Each store has a minimum goal of 5 reviews received per month, focused on service quality and overall experience.",
+        explain_es: "Cada tienda tiene una meta mínima de 5 reseñas por mes, enfocadas en la calidad del servicio y la experiencia." },
+      { q: "For Exclusive/New Items, what's the minimum weekly target per salesperson?", q_es: "Para Artículos Exclusivos/Nuevos, ¿cuál es la meta mínima semanal por vendedor?",
+        options: [
+          { en: "2 pieces.", es: "2 piezas.", correct: false },
+          { en: "5 pieces.", es: "5 piezas.", correct: false },
+          { en: "10 pieces.", es: "10 piezas.", correct: true },
+          { en: "25 pieces.", es: "25 piezas.", correct: false }
+        ],
+        explain: "Exclusive items: 10/week. Liquidation: 10/week. New products (30 days or less): 5/week.",
+        explain_es: "Artículos exclusivos: 10/semana. Liquidación: 10/semana. Productos nuevos (30 días o menos): 5/semana." },
+      { q: "For new products (30 days or less old), what's the weekly target per salesperson?", q_es: "Para productos nuevos (30 días o menos), ¿cuál es la meta semanal por vendedor?",
+        options: [
+          { en: "2 pieces.", es: "2 piezas.", correct: false },
+          { en: "5 pieces.", es: "5 piezas.", correct: true },
+          { en: "10 pieces.", es: "10 piezas.", correct: false },
+          { en: "20 pieces.", es: "20 piezas.", correct: false }
+        ],
+        explain: "New products (30 days or less) have a weekly target of 5 pieces per salesperson.",
+        explain_es: "Los productos nuevos (30 días o menos) tienen una meta semanal de 5 piezas por vendedor." },
+      { q: "What is the WhatsApp conversion rate considered a 'critical concern'?", q_es: "¿Qué tasa de conversión por WhatsApp se considera 'preocupación crítica'?",
+        options: [
+          { en: "Below 50%.", es: "Menos del 50%.", correct: false },
+          { en: "Below 25%.", es: "Menos del 25%.", correct: false },
+          { en: "Below 15%.", es: "Menos del 15%.", correct: true },
+          { en: "Below 35%.", es: "Menos del 35%.", correct: false }
+        ],
+        explain: "Below 15% is a critical concern. The minimum acceptable is 25%, operational goal 35–40%, and excellent 50%+.",
+        explain_es: "Menos del 15% es preocupación crítica. Mínimo aceptable 25%, meta operativa 35–40%, excelente 50%+." },
+      { q: "What is the minimum acceptable rate of Source field completion for new customers in Celerant?", q_es: "¿Cuál es el mínimo aceptable de campo Source completado para nuevos clientes en Celerant?",
+        options: [
+          { en: "20%.", es: "20%.", correct: false },
+          { en: "50%.", es: "50%.", correct: true },
+          { en: "70%.", es: "70%.", correct: false },
+          { en: "100%.", es: "100%.", correct: false }
+        ],
+        explain: "All new customers must have the Source field filled. Minimum acceptable 50%, excellent 80%+, critical concern below 15%.",
+        explain_es: "Todos los nuevos clientes deben tener el campo Source. Mínimo aceptable 50%, excelente 80%+, crítico menos del 15%." },
+      { q: "What if a sales rep is falling behind their weekly goal?", q_es: "¿Qué pasa si un vendedor está atrás en su meta semanal?",
+        options: [
+          { en: "Wait until the end of the week to address it.", es: "Esperar al final de la semana para abordarlo.", correct: false },
+          { en: "Intervention point halfway through the week to refocus those not meeting quota.", es: "Punto de intervención a mitad de semana para reenfocar a quienes no cumplen.", correct: true },
+          { en: "Move them off the floor.", es: "Sacarlos del piso.", correct: false },
+          { en: "Cancel their goal.", es: "Cancelar su meta.", correct: false }
+        ],
+        explain: "Daily check-ins report sales per person; a midweek intervention helps refocus reps behind on quota with targeted customer lists.",
+        explain_es: "Las revisiones diarias reportan ventas por persona; una intervención a mitad de semana ayuda a reenfocar a los rezagados con listas de clientes." },
+      { q: "What is 'Excellent' WhatsApp conversion rate?", q_es: "¿Qué tasa de conversión por WhatsApp se considera 'Excelente'?",
+        options: [
+          { en: "20%.", es: "20%.", correct: false },
+          { en: "30%.", es: "30%.", correct: false },
+          { en: "50% or more.", es: "50% o más.", correct: true },
+          { en: "100%.", es: "100%.", correct: false }
+        ],
+        explain: "Excellent WhatsApp-to-sale conversion is 50% or more. Minimum 25%, operational goal 35–40%, critical below 15%.",
+        explain_es: "Conversión excelente de WhatsApp a venta es 50% o más. Mínimo 25%, meta operativa 35–40%, crítico menos del 15%." }
+    ]
+  },
+
+  {
+    id: "evaluation",
+    title: "Evaluation Criteria",
+    title_es: "Criterios de Evaluación",
+    blurb: "How performance is measured",
+    blurb_es: "Cómo se mide el desempeño",
+    study: {
+      quote: "Performance is measured across five lenses — marketing, operations, culture, merchandising, and sales.",
+      quote_es: "El desempeño se mide en cinco frentes — marketing, operaciones, cultura, merchandising y ventas.",
+      groups: [
+        { heading: "Marketing", heading_es: "Marketing", items: [
+          { en: "Using scripts correctly.", es: "Uso correcto de guiones." },
+          { en: "Conversion — bringing customers in.", es: "Conversión — traer al cliente a la tienda." },
+          { en: "Dollar value of sale.", es: "Valor en dólares de la venta." },
+          { en: "Celerant fields completed and flags used.", es: "Campos de Celerant llenos y banderas usadas." },
+          { en: "Membership explanation to new clients.", es: "Explicación de membresía a clientes nuevos." },
+          { en: "Event announcements to existing and new customers.", es: "Anuncios de eventos a clientes existentes y nuevos." }
+        ]},
+        { heading: "Operations", heading_es: "Operaciones", items: [
+          { en: "Tags, uniforms, attendance, time keeping, money handling.", es: "Etiquetas, uniformes, asistencia, control de tiempo, manejo de dinero." },
+          { en: "Customer outreach — 150 calls/week minimum.", es: "Seguimiento al cliente — mínimo 150 llamadas/semana." },
+          { en: "Outreach must use Axion and be separate from WhatsApp.", es: "El seguimiento debe usar Axion y mantenerse separado de WhatsApp." }
+        ]},
+        { heading: "Company Culture", heading_es: "Cultura de Empresa", items: [
+          { en: "Reviews and complaints.", es: "Reseñas y quejas." },
+          { en: "Event performance.", es: "Desempeño en eventos." },
+          { en: "Attendance for special events and meetings.", es: "Asistencia a eventos especiales y reuniones." },
+          { en: "Active participation.", es: "Participación activa." },
+          { en: "Company intro to new clients.", es: "Presentación de la empresa a clientes nuevos." }
+        ]},
+        { heading: "Merchandising", heading_es: "Merchandising", items: [
+          { en: "Exclusive brand movement.", es: "Movimiento de marcas exclusivas." },
+          { en: "Liquidation movement.", es: "Movimiento de liquidación." },
+          { en: "Product placement and cleanliness.", es: "Colocación de producto y limpieza." },
+          { en: "Proper product handling.", es: "Manejo correcto del producto." }
+        ]},
+        { heading: "Sales", heading_es: "Ventas", items: [
+          { en: "Customer relationship management.", es: "Gestión de relación con el cliente." },
+          { en: "Building long-term loyalty, not just transactions.", es: "Construir lealtad a largo plazo, no solo transacciones." }
+        ]},
+        { heading: "Build Recognition", heading_es: "Construir Reconocimiento", items: [
+          { en: "Each department is responsible for shoutouts in WhatsApp communication.", es: "Cada departamento es responsable de los reconocimientos en WhatsApp." }
+        ]}
+      ]
+    },
+    questions: [
+      { q: "Which is part of the Marketing evaluation category?", q_es: "¿Cuál es parte de la categoría de evaluación de Marketing?",
+        options: [
+          { en: "Uniforms.", es: "Uniformes.", correct: false },
+          { en: "Membership explanation to new clients.", es: "Explicación de membresía a clientes nuevos.", correct: true },
+          { en: "Product placement.", es: "Colocación de producto.", correct: false },
+          { en: "Time keeping.", es: "Control de tiempo.", correct: false }
+        ],
+        explain: "Marketing evaluation includes scripts, conversion, sale value, Celerant fields, flags, membership explanation, and event announcements.",
+        explain_es: "Marketing incluye guiones, conversión, valor de venta, campos de Celerant, banderas, explicación de membresía y anuncios de eventos." },
+      { q: "Customer outreach calls must be tracked separately from WhatsApp using which system?", q_es: "Las llamadas de seguimiento se deben llevar separadas de WhatsApp usando ¿qué sistema?",
+        options: [
+          { en: "Axion.", es: "Axion.", correct: true },
+          { en: "Excel only.", es: "Solo Excel.", correct: false },
+          { en: "Personal cell phones.", es: "Celulares personales.", correct: false },
+          { en: "Email.", es: "Correo electrónico.", correct: false }
+        ],
+        explain: "A minimum of 150 calls/week must be tracked using Axion — and must be kept separate from WhatsApp messages.",
+        explain_es: "Mínimo 150 llamadas por semana deben registrarse usando Axion — y deben mantenerse separadas de WhatsApp." },
+      { q: "Which is evaluated under Company Culture?", q_es: "¿Qué se evalúa bajo Cultura de Empresa?",
+        options: [
+          { en: "Cash handling.", es: "Manejo de efectivo.", correct: false },
+          { en: "Reviews, complaints, and event participation.", es: "Reseñas, quejas y participación en eventos.", correct: true },
+          { en: "Liquidation movement.", es: "Movimiento de liquidación.", correct: false },
+          { en: "Inventory tags.", es: "Etiquetas de inventario.", correct: false }
+        ],
+        explain: "Company Culture is measured by reviews/complaints, event performance, attendance for special events/meetings, and participation.",
+        explain_es: "La Cultura de Empresa se mide por reseñas/quejas, desempeño en eventos, asistencia a eventos especiales y participación." },
+      { q: "Which category does 'Customer Relationship Management' fall under?", q_es: "¿Bajo qué categoría cae 'Gestión de Relación con el Cliente'?",
+        options: [
+          { en: "Operations.", es: "Operaciones.", correct: false },
+          { en: "Sales.", es: "Ventas.", correct: true },
+          { en: "Merchandising.", es: "Merchandising.", correct: false },
+          { en: "Marketing.", es: "Marketing.", correct: false }
+        ],
+        explain: "Sales evaluation centers on customer relationship management — building lasting connections, not just transactions.",
+        explain_es: "La evaluación de Ventas se centra en la gestión de relación con el cliente — construir conexiones duraderas, no solo transacciones." },
+      { q: "What is each department responsible for, to build recognition?", q_es: "¿De qué es responsable cada departamento, para construir reconocimiento?",
+        options: [
+          { en: "Cleaning the storage room.", es: "Limpiar la bodega.", correct: false },
+          { en: "Shoutouts in WhatsApp communication.", es: "Reconocimientos públicos en WhatsApp.", correct: true },
+          { en: "Designing the uniforms.", es: "Diseñar los uniformes.", correct: false },
+          { en: "Hiring new staff.", es: "Contratar nuevo personal.", correct: false }
+        ],
+        explain: "Each department is responsible for shoutouts to build recognition and culture across teams.",
+        explain_es: "Cada departamento es responsable de hacer reconocimientos públicos para construir cultura entre los equipos." },
+      { q: "Which is part of the Operations evaluation?", q_es: "¿Qué es parte de la evaluación de Operaciones?",
+        options: [
+          { en: "Customer Relationship Management.", es: "Gestión de Relación con el Cliente.", correct: false },
+          { en: "Tags, uniforms, attendance, time keeping, money handling.", es: "Etiquetas, uniformes, asistencia, control de tiempo, manejo de dinero.", correct: true },
+          { en: "Liquidation movement.", es: "Movimiento de liquidación.", correct: false },
+          { en: "Membership explanation.", es: "Explicación de membresía.", correct: false }
+        ],
+        explain: "Operations covers tags, uniforms, attendance, timekeeping, money handling, and outreach call discipline.",
+        explain_es: "Operaciones cubre etiquetas, uniformes, asistencia, control de tiempo, manejo de dinero y disciplina de llamadas." },
+      { q: "Under Merchandising evaluation, which is included?", q_es: "Bajo la evaluación de Merchandising, ¿qué se incluye?",
+        options: [
+          { en: "Exclusive brand movement and liquidation.", es: "Movimiento de marca exclusiva y liquidación.", correct: true },
+          { en: "Event invitations.", es: "Invitaciones a eventos.", correct: false },
+          { en: "Money handling.", es: "Manejo de dinero.", correct: false },
+          { en: "Membership signups.", es: "Inscripciones a membresía.", correct: false }
+        ],
+        explain: "Merchandising evaluates exclusive brand movement, liquidation, product placement, cleanliness, and product handling.",
+        explain_es: "Merchandising evalúa movimiento de marca exclusiva, liquidación, colocación, limpieza y manejo del producto." },
+      { q: "Which is NOT part of Marketing evaluation?", q_es: "¿Cuál NO es parte de la evaluación de Marketing?",
+        options: [
+          { en: "Using scripts.", es: "Uso de guiones.", correct: false },
+          { en: "Conversion.", es: "Conversión.", correct: false },
+          { en: "Money handling.", es: "Manejo de dinero.", correct: true },
+          { en: "Celerant fields and flags.", es: "Campos y banderas de Celerant.", correct: false }
+        ],
+        explain: "Money handling falls under Operations. Marketing covers scripts, conversion, sale value, Celerant fields, flags, memberships, and event invites.",
+        explain_es: "El manejo de dinero está en Operaciones. Marketing cubre guiones, conversión, valor de venta, campos de Celerant, banderas, membresías y eventos." }
+    ]
+  }
+];
+
+/* ============================================================
+   STATE + LOGIC
+   ============================================================ */
+let state = { sectionId: null, questions: [], index: 0, score: 0, answered: false };
+
+function renderHome() {
+  const grid = document.getElementById('sections-grid');
+  grid.innerHTML = SECTIONS.map((s, i) => `
+    <div class="section-card">
+      <div>
+        <div class="section-num">Section · Sección ${String(i + 1).padStart(2, '0')}</div>
+        <div class="section-title">${s.title}</div>
+        <div class="section-title-es">${s.title_es}</div>
+        <div class="section-blurb">${s.blurb}<br><span class="es">${s.blurb_es}</span></div>
+      </div>
+      <div class="section-meta">
+        <span>${s.questions.length} Questions</span>
+        <span class="badge">${s.study ? 'Study + Quiz' : 'Quiz'}</span>
+      </div>
+      <div class="section-buttons">
+        <button class="study" onclick="openStudy('${s.id}')">📖 Study Guide</button>
+        <button class="quiz" onclick="startQuiz('${s.id}')">Take Quiz</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openStudy(sectionId) {
+  const sec = SECTIONS.find(s => s.id === sectionId);
+  state.sectionId = sectionId;
+  document.getElementById('study-title').innerHTML = `${sec.title} <span class="es">${sec.title_es}</span>`;
+  const html = `
+    ${sec.study.quote ? `<div class="key-quote">"${sec.study.quote}"<span class="es">"${sec.study.quote_es}"</span></div>` : ''}
+    ${sec.study.groups.map(g => `
+      <div class="study-section">
+        <h3>${g.heading}<span class="es">${g.heading_es}</span></h3>
+        <ul>${g.items.map(it => `<li>${it.en}<span class="es">${it.es}</span></li>`).join('')}</ul>
+      </div>
+    `).join('')}
+  `;
+  document.getElementById('study-content').innerHTML = html;
+  document.getElementById('start-from-study').onclick = () => startQuiz(sectionId);
+  document.getElementById('home-view').classList.add('hidden');
+  document.getElementById('study-view').classList.add('active');
+  document.getElementById('quiz-view').classList.remove('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function startQuiz(sectionId) {
+  state.sectionId = sectionId;
+  state.index = 0;
+  state.score = 0;
+  state.answered = false;
+  if (sectionId === 'all') {
+    state.questions = SECTIONS.flatMap(s => s.questions.map(q => ({...q, _section: s.title, _section_es: s.title_es})));
+    document.getElementById('quiz-title').innerHTML = `Full Quiz <span class="es">Cuestionario Completo</span>`;
+  } else {
+    const sec = SECTIONS.find(s => s.id === sectionId);
+    state.questions = sec.questions.map(q => ({...q, _section: sec.title, _section_es: sec.title_es}));
+    document.getElementById('quiz-title').innerHTML = `${sec.title} <span class="es">${sec.title_es}</span>`;
+  }
+  document.getElementById('home-view').classList.add('hidden');
+  document.getElementById('study-view').classList.remove('active');
+  document.getElementById('quiz-view').classList.add('active');
+  document.getElementById('results').classList.remove('show');
+  document.getElementById('q-total').textContent = state.questions.length;
+  renderQuestion();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderQuestion() {
+  state.answered = false;
+  const q = state.questions[state.index];
+  document.getElementById('q-current').textContent = state.index + 1;
+  document.getElementById('progress-fill').style.width = `${((state.index) / state.questions.length) * 100}%`;
+  document.getElementById('next-btn').style.display = 'none';
+  const letters = ['A', 'B', 'C', 'D', 'E'];
+  document.getElementById('question-container').innerHTML = `
+    <div class="question-card">
+      <div class="q-number">Question · Pregunta ${String(state.index + 1).padStart(2, '0')}${state.sectionId === 'all' ? ` · ${q._section}` : ''}</div>
+      <div class="q-text">${q.q}</div>
+      <div class="q-text-es">${q.q_es}</div>
+      <div class="options">
+        ${q.options.map((opt, idx) => `
+          <button class="option" data-idx="${idx}" onclick="selectOption(${idx})">
+            <span class="option-letter">${letters[idx]}</span>
+            <span class="option-text">${opt.en}<span class="es">${opt.es}</span></span>
+          </button>
+        `).join('')}
+      </div>
+      <div class="feedback" id="feedback">
+        <strong id="feedback-label">— Insight —</strong>
+        <span id="feedback-text"></span>
+      </div>
+    </div>
+  `;
+}
+
+function selectOption(idx) {
+  if (state.answered) return;
+  state.answered = true;
+  const q = state.questions[state.index];
+  const buttons = document.querySelectorAll('.option');
+  const isCorrect = q.options[idx].correct;
+  if (isCorrect) state.score++;
+  buttons.forEach((btn, i) => {
+    btn.disabled = true;
+    if (q.options[i].correct) btn.classList.add('correct');
+    else if (i === idx) btn.classList.add('incorrect');
+  });
+  const fb = document.getElementById('feedback');
+  document.getElementById('feedback-label').textContent = isCorrect ? '✓ Correct · Correcto' : '✗ Review · A revisar';
+  document.getElementById('feedback-text').innerHTML = `${q.explain}<span class="es">${q.explain_es}</span>`;
+  fb.classList.add('show');
+  const nextBtn = document.getElementById('next-btn');
+  nextBtn.style.display = 'inline-block';
+  nextBtn.textContent = (state.index + 1 >= state.questions.length) ? 'See Results · Ver Resultados' : 'Next · Siguiente';
+}
+
+function nextQuestion() {
+  state.index++;
+  if (state.index >= state.questions.length) { showResults(); return; }
+  renderQuestion();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showResults() {
+  document.getElementById('progress-fill').style.width = '100%';
+  document.getElementById('question-container').innerHTML = '';
+  document.getElementById('next-btn').style.display = 'none';
+  document.getElementById('score-num').textContent = state.score;
+  document.getElementById('score-total').textContent = state.questions.length;
+  const pct = state.score / state.questions.length;
+  let tier, tier_es, msg, msg_es;
+  if (pct === 1) {
+    tier = '— La Mina Gold Standard —'; tier_es = 'Estándar de Oro';
+    msg = 'Perfect. You embody the standard.';
+    msg_es = 'Perfecto. Tú encarnas el estándar.';
+  } else if (pct >= 0.8) {
+    tier = '— Floor Leader —'; tier_es = 'Líder del Piso';
+    msg = 'Strong knowledge. A few details to polish.';
+    msg_es = 'Conocimiento sólido. Algunos detalles por pulir.';
+  } else if (pct >= 0.6) {
+    tier = '— On the Floor —'; tier_es = 'En el Piso';
+    msg = "You're close. Review the missed sections and try again.";
+    msg_es = 'Estás cerca. Revisa las secciones falladas e inténtalo de nuevo.';
+  } else {
+    tier = '— Back to Training —'; tier_es = 'De Vuelta al Entrenamiento';
+    msg = 'Worth another pass through the study guide before retaking.';
+    msg_es = 'Vale la pena repasar la guía de estudio antes de reintentar.';
+  }
+  document.getElementById('tier-label').textContent = tier;
+  document.getElementById('tier-label-es').textContent = tier_es;
+  document.getElementById('result-message').innerHTML = `${msg}<span class="es">${msg_es}</span>`;
+  document.getElementById('results').classList.add('show');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function retryQuiz() { startQuiz(state.sectionId); }
+
+function goHome() {
+  document.getElementById('quiz-view').classList.remove('active');
+  document.getElementById('study-view').classList.remove('active');
+  document.getElementById('home-view').classList.remove('hidden');
+  document.getElementById('results').classList.remove('show');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function setLang(lang) {
+  document.body.classList.remove('lang-bi', 'lang-en', 'lang-es');
+  document.body.classList.add(`lang-${lang}`);
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+document.querySelectorAll('.lang-toggle button').forEach(btn => {
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
+
+renderHome();
+</script>
+</body>
+</html>
